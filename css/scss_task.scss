@@ -1,0 +1,65 @@
+$padding_value: 10px;
+$border_radius: 5px;
+$box_shadow: 4px 3px 19px 0px rgba(0, 0, 0, 0.3);
+$primary_color: #fff;
+$box_shadow-hover: none;
+$opacity-hover:0.3;
+
+%box-shared {
+  padding: $padding_value;
+  border-radius: $border_radius;
+  box-shadow: $box_shadow;
+}
+
+@mixin box_wrapper-styling {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: $padding_value + 10px;
+  font-family: sans-serif;
+}
+
+.box__wrapper {
+  @include box_wrapper-styling();
+  .box-primary {
+    @extend %box-shared;
+    background-color: #112055;
+    color: $primary_color;
+
+    &:hover {
+      box-shadow: $box_shadow-hover;
+      opacity: $opacity-hover;
+    }
+  }
+
+  .box-primary-lighter {
+    @extend %box-shared;
+    background-color: lighten($primary_color, 20%);
+
+    &:hover {
+      box-shadow: $box_shadow-hover;
+      opacity: $opacity-hover;
+    }
+  }
+
+  .box-primary-darker {
+    @extend %box-shared;
+    background-color: darken($primary_color, 20%);
+
+    &:hover {
+      box-shadow: $box_shadow-hover;
+      opacity: $opacity-hover;
+    }
+  }
+
+  .box-secondary {
+    @extend %box-shared;
+    background-color: #4f9d92;
+    color: #000;
+
+    &:hover {
+      box-shadow: $box_shadow-hover;
+      opacity: $opacity-hover;
+    }
+  }
+}

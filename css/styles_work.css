@@ -1,0 +1,215 @@
+:root{
+    --blackColor: black;
+    --background-gridColor: lightgray;
+    --body-backgroundColor: #caebf2;
+    --rgbaShadow: rgba(0, 0, 0, 0.3);
+    --opaqueColor:#808080;
+    --social-mediaScale: 1.2;
+}
+*{
+    box-sizing: border-box;
+}
+h1 {
+    color: var(--blackColor);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* .profile_portarit:hover {
+    box-shadow: 0 8px 12px 0 rgb(05, 20, 40, 0.16);
+    border-radius: 25%;
+    width: 700;
+    height: 700;
+
+} */
+
+/* .profile_portarit {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16);
+    transition: all ease-in-out;
+    float: left;
+} */
+
+/* .columns {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.programming-languages {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+} */
+
+/* /* .navigation-list__item:hover { */
+    /* No underlining when hovering over a link */
+    /* color: red; */
+    /* text-decoration: none; */
+/* } */ 
+
+/* a:hover { */
+    /* No underlining when hovering over a link */
+    /* color: red; */
+    /* text-decoration: none; */
+/* } */
+
+/*Next to the hover state,
+/* you can also style a visited and selected link*/ /*a:visited {*/ 
+    /* visited link */
+    /* color: blue; */
+/* } */
+
+/* a:active { */
+    /* selected link */
+    /* color: #489c79; */
+/* } */
+/* .navigation-list_active--active{
+    text-decoration: none;
+} */
+
+.page-footer{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+} 
+.page-header_item{
+    flex: 1 1 200px;
+}
+
+.page-header .page-header__item:last-child {
+    /* flex-grow: 1; */
+    text-align: right;        
+}
+
+.navigation-list{
+    list-style-type: none;
+}
+
+.navigation-list li{
+    display: inline-block;
+    margin-left: 15px;    
+}
+
+nav .navigation-list li a {
+    color: var(--opaqueColor);
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 5px 5px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+  }
+/* nav .navigation-list li a:hover{
+    transform: scale(1.2);
+} */
+
+nav .navigation-list li a:before{
+    position: absolute;
+    color: var(--blackColor);
+    top: 0px;
+    left: 0px;
+    padding: 5px 5px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+nav .navigation-list li a:hover:before{
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    grid-gap: 20px;    
+}
+.grid__item{
+    background-color: var(--background-gridColor);
+    transition: 0.5s ease;
+}
+
+.grid__item:last-child {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .svg-container{
+    margin: 20px;
+    position: relative;
+    left: 21%;
+  }
+
+  @media all and (max-width: 500px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .grid__item:last-child{
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .svg-img{
+        transform: scale(0.5);
+        right: 100px;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 800px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .grid__item:last-child{
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .svg-img{
+        transform: scale(0.4);
+        right: 150px;
+        
+    }
+  }
+  .grid__item:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  .github, .twitterX, .linkedin{
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+    transition: 0.3s ease;
+  }
+  .github:hover, .twitterX:hover, .linkedin:hover{
+    transform: scale(var(--social-mediaScale));
+    cursor: pointer;
+  }
+
+
+

@@ -1,0 +1,232 @@
+:root{
+    --blackColor: #000000;
+    --body-backgorundColor: #caebf2;
+    --rgbaShadow: rgba(0, 0, 0, 0.3);
+    --redColor: #f76144;
+    --yellowColor: #fcffad;
+    --orangeColor: #edc655;
+    --opaqueColor:#808080;
+    --blackRGBA: rgba(0, 0, 0, 0);
+    --button-backgroundColor:#357b70;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--body-backgorundColor);
+    
+}
+h1 {
+    color: var(--blackColor);
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    left: 420px;
+}
+
+p{
+    font-style: italic;
+}
+
+.columns {
+    color: var(--blackColor);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.programming-languages {
+    color: var(--blackColor);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container{
+    max-width: 840px;
+    margin: 20px auto;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.i-am, .i-like{
+    text-align: center;
+}
+.button {
+    /*overwrites browser defaults resets the border*/
+    border: none;
+    display: inline-block;
+    /*takes the font from the outer container*/
+    font-family: inherit;
+    /*styles the button*/
+    background-color: var(--button-backgroundColor);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /*width of the border, type, color*/
+    border-bottom: 2px solid var(--rgbaShadow);
+    transition: 0.4s opacity, 0.5s;
+    position: relative;
+    left: 350px;
+    margin: 2% auto;
+}
+
+
+.button:hover {
+    /*lets the m8ouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /*reeduces the opacity of the button 80% */
+    opacity: 0.5;
+    font-size: 18px;
+}
+.about-list{
+    list-style: none;
+}
+
+.about-list_item{
+    font-style: italic;
+}
+
+/* .navigation-list__item:hover { */
+    /* No underlining when hovering over a link */
+    /* color: red; */
+    /* text-decoration: none; */
+/* } */
+
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+} 
+.page-header_item{
+    flex: 1 1 200px;
+}
+
+.page-header .page-header__item:last-child {
+    /* flex-grow: 1; */
+    text-align: right;        
+}
+
+.navigation-list{
+    list-style-type: none;
+}
+
+.navigation-list li{
+    display: inline-block;
+    margin-left: 15px;
+}
+nav .navigation-list li a {
+    color: var(--opaqueColor);
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 5px 5px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+  }
+
+  nav .navigation-list li a:before{
+    position: absolute;
+    color: var(--blackColor);
+    top: 0px;
+    left: 0px;
+    padding: 5px 5px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+nav .navigation-list li a:hover:before{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.page-footer{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,var(--blackRGBA),rgba(0, 0, 0, 0.75),var(--blackRGBA));
+}
+
+@keyframes color-change {
+    0%{
+        fill: var(--orangeColor);
+    }
+    50%{
+        fill: var(--yellowColor);
+    }
+    100%{
+        fill: var(--redColor);
+    }
+}
+/* .sun{
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+} */
+
+/* Short way */
+.sun {
+    animation: 4s color-change infinite alternate linear;
+  }
+
+  @keyframes cloud-move {
+    from{
+        transform: translate(0, 50px);
+    }
+    to{
+        transform: translate(200px,50px);
+    }
+  }
+
+  /* .cloud-front{
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+  } */
+
+  /* Short way */
+  .cloud-front{
+    animation: 30s cloud-move infinite alternate linear;
+  }
+
+  @keyframes cloud-move-reverse {
+    from{
+        translate: (446px,48px);
+    }
+    to{
+        transform: translate(100px, 48px);
+    }
+  }
+  .cloud-back{
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
+
+  .github, .twitterX, .linkedin{
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+    transition: 0.3s ease;
+  }
+  .github:hover, .twitterX:hover, .linkedin:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
