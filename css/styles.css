@@ -77,8 +77,6 @@ you can also style a visited and selected link*/ /*a:visited {*/
     flex: 1 1 200px;
 }
 
-
-
 .navigation-list{
     list-style-type: none;
 }

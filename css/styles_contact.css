@@ -195,7 +195,7 @@ textarea.input{
     position: absolute;
     top: 50%;
     left: 15px;
-    transform: translateY(-var(--circled-border-radius));
+    transform: translateY(-50%);
     padding: 0 0.4rem;
     color: var(--inputColor);
     font-size: 0.9rem;
@@ -231,7 +231,7 @@ textarea.input{
     position: absolute;
     top: 0;
     left: 25px;
-    transform: translateY(-var(--circled-border-radius));
+    transform: translateY(-50%);
     font-size: 0.8rem;
     padding: 0 0.4rem;
     color: transparent;
@@ -245,7 +245,7 @@ textarea.input{
 .input-container span:after{
     content: "";
     position: absolute;
-    width: 50%;
+    width: var(--circled-border-radius);
     height: 5px;
     /* opacity: 0; */
     transition: 0.3s;
@@ -255,11 +255,11 @@ textarea.input{
 }
 
 .input-container span:before{
-    left: 50%;
+    left: var(--circled-border-radius);
 }
 
 .input-container span:after{
-    right: 50%;
+    right: var(--circled-border-radius);
 }
 .input-container.focus label{
     top: 0;
@@ -329,6 +329,7 @@ textarea.input{
     .page-header{
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
     }
     .contact-info:before{
         bottom: initial;
