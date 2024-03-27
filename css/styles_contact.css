@@ -90,7 +90,7 @@ hr{
     background-image: linear-gradient(to right,var(--blackRGBA),rgba(0, 0, 0, 0.75),var(--blackRGBA));
 }
 
-.container{
+.container-contact{
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -195,7 +195,7 @@ textarea.input{
     position: absolute;
     top: 50%;
     left: 15px;
-    transform: translateY(-var(--circled-border-radius));
+    transform: translateY(-50%);
     padding: 0 0.4rem;
     color: var(--inputColor);
     font-size: 0.9rem;
@@ -231,7 +231,7 @@ textarea.input{
     position: absolute;
     top: 0;
     left: 25px;
-    transform: translateY(-var(--circled-border-radius));
+    transform: translateY(-50%);
     font-size: 0.8rem;
     padding: 0 0.4rem;
     color: transparent;
@@ -329,6 +329,7 @@ textarea.input{
     .page-header{
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
     }
     .contact-info:before{
         bottom: initial;
@@ -370,7 +371,7 @@ textarea.input{
     .input {
         width: 82%;
     }
-    .container {
+    .container-contact {
         padding: 1.5rem;
     }
     .contact-info:before {
@@ -412,7 +413,7 @@ textarea.input{
     .input {
         width: 80%;
     }
-    .container {
+    .container-contact {
         padding: 1.2rem;
     }
     .contact-info:before {
@@ -452,7 +453,7 @@ textarea.input{
     .input {
         width: 80%;
     }
-    .container {
+    .container-contact {
         padding: 1.2rem;
     }
     .contact-info:before {
