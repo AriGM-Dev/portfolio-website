@@ -1,3 +1,9 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 /* Index and Generics Styles */
 *{
@@ -275,12 +281,17 @@ hr{
 
 
 /* Work Styles */
+.container-work{
+    max-width: 840px;
+    margin: 0 auto;
+}
 .grid{
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;    
-    grid-gap: 20px;    
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 10px;    
+    grid-gap: 20px;
 }
 .grid__item{
     background-color: lightgray;
@@ -310,22 +321,36 @@ hr{
             transform: scale(1.05);
     cursor: pointer;
   }
+  .svg-img{
+    width: 840px;
+    height: auto;
+  }
 
   /* About */
 
   body{
     background-color: #caebf2;
   }
+
   #about {
     color: black;
     font-size: 30px;
     font-weight: 700;
-    position: relative;
-    left: 420px;
+     position: relative;
+    /* left: 420px; 
+    align-items: center; */
 }
 
-p{
+.container-about > h1{
+    left: 50%;
+    right: 50%;
+}
+
+.container-about > p{
+    
     font-style: italic;
+    left: 50%;
+    right: 50%;
 }
 
 .columns {
@@ -343,6 +368,14 @@ p{
 
 .container-about{
     max-width: 840px;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    
+}
+
+.container-about > div{
     margin: 20px auto;
 }
 
@@ -351,6 +384,9 @@ p{
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .i-am, .i-like{
     text-align: center;
@@ -373,8 +409,15 @@ p{
     -o-transition: 0.4s opacity, 0.5s;
     transition: 0.4s opacity, 0.5s;
     position: relative;
-    left: 350px;
+    /* left: 50%;
+    right: 50%; */
+    /* text-align: 50%; */
     margin: 2% auto;
+}
+.container-about > a{
+    text-align: center;
+    left: 40%;
+    right: 60;
 }
 
 
@@ -797,6 +840,7 @@ textarea.input{
 }
 
 @media (max-width: 850px){
+    /* Contact Page */
     .form{
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -826,10 +870,8 @@ textarea.input{
         left: initial;
         right: 70px;
     }
-    .social-media {
-        padding: 1.5rem;
-    }
-
+    
+    /* Work Page */
     .grid{
         -ms-grid-columns: 1fr 10px 1fr;
         grid-template-columns: 1fr 1fr;
@@ -849,6 +891,23 @@ textarea.input{
         position: relative;
         right: 40px;
     }
+    .social-media {
+        padding: 1.5rem;
+    }
+    .about-grid{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-column-align: center;
+            justify-self: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+/* Media Querie just for Work Page */
+@media (min-width: 500px) and (max-width:850px){
+
 }
 
 @media all and (max-width: 500px){
@@ -904,8 +963,7 @@ textarea.input{
                 flex-direction: column;
         -ms-flex-pack: distribute;
             justify-content: space-around;
-        margin-left: 10px;
-        margin-right: 10px;
+       margin: 10px 10px;
     }
     
 }
@@ -965,6 +1023,7 @@ textarea.input{
             justify-content: space-around;
         margin-left: 10px;
         margin-right: 10px;
+        margin: 20px 0;
     }
     .information p{
         font-size: 0.70rem;
@@ -993,6 +1052,16 @@ textarea.input{
     .input, .btn {
         padding: 0.44rem 1.1rem;
     }
+    .social-media .social-icons{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
 }
 @media(max-width:330px){
     nav .navigation-list li a{
